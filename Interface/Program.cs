@@ -1,10 +1,28 @@
 ﻿namespace Interface
 {
-    internal class Program
+    interface IAnimal
+    {
+        void animalSound(); 
+    }
+
+    
+    class Pig : IAnimal
+    {
+        public void animalSound()
+        {
+            
+            Console.WriteLine("The pig says");
+        }
+    }
+
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Pig myPig = new Pig(); 
+            myPig.animalSound();
         }
     }
 }
+
+
